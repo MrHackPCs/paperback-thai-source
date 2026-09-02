@@ -1,7 +1,7 @@
 {
-  "name": "paperback-flash-manga",
+  "name": "paperback-thai-source",
   "version": "1.0.0",
-  "description": "Paperback iOS extension for Flash-Manga (Thai translation)",
+  "description": "PaperBack Thai Source — Paperback iOS extensions (Thai translation)",
   "main": "dist/index.js",
   "scripts": {
     "build": "node build.js",

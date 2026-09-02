@@ -266,8 +266,8 @@ if (typeof globalThis !== 'undefined') {
             types: "0.8.7"
         },
         repository: {
-            name: "Thai Manga Extensions",
-            description: "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!"
+            name: "PaperBack Thai Source",
+            description: "PaperBack Thai Source — Paperback extensions for Thai manga (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!"
         },
         sources: SOURCES
     }
@@ -290,9 +290,9 @@ if (typeof globalThis !== 'undefined') {
 
     if (templateHtml) {
         templateHtml = templateHtml
-            .replace(/Netsky's Extensions \(0\.9\)/g, "Thai Manga Extensions")
-            .replace(/Netsky's extensions for 0\.9!/g, "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!")
-            .replace(/https:\/\/thenetsky\.github\.io\/netskys-extensions\/0\.9/g, "https://mrhackpcs.github.io/flash-manga")
+            .replace(/Netsky's Extensions \(0\.9\)/g, "PaperBack Thai Source")
+            .replace(/Netsky's extensions for 0\.9!/g, "PaperBack Thai Source (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!")
+            .replace(/https:\/\/thenetsky\.github\.io\/netskys-extensions\/0\.9/g, "https://mrhackpcs.github.io/paperback-thai-source")
 
         fs.writeFileSync(path.join(distDir, 'index.html'), templateHtml)
         fs.writeFileSync(path.join(v9Dir, 'index.html'), templateHtml)

@@ -51,8 +51,8 @@ git push origin gh-pages
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n========================================================" -ForegroundColor Green
     Write-Host "  DEPLOYMENT COMPLETE!" -ForegroundColor Green
-    Write-Host "  Repository URL : https://github.com/MrHackPCs/flash-manga" -ForegroundColor Cyan
-    Write-Host "  GitHub Pages   : https://mrhackpcs.github.io/flash-manga/" -ForegroundColor Cyan
+    Write-Host "  Repository URL : https://github.com/MrHackPCs/paperback-thai-source" -ForegroundColor Cyan
+    Write-Host "  GitHub Pages   : https://mrhackpcs.github.io/paperback-thai-source/" -ForegroundColor Cyan
     Write-Host "========================================================" -ForegroundColor Green
 } else {
     Write-Host "`n[!] Push requires authentication. Please log in or provide your GitHub PAT." -ForegroundColor Yellow
