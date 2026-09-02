@@ -190,6 +190,11 @@ async function build() {
     fs.mkdirSync(v9Dir, { recursive: true })
     fs.mkdirSync(v8Dir, { recursive: true })
 
+    // Create .nojekyll to prevent GitHub Pages from bypassing folders starting with digits/underscores
+    fs.writeFileSync(path.join(distDir, '.nojekyll'), '')
+    fs.writeFileSync(path.join(v9Dir, '.nojekyll'), '')
+    fs.writeFileSync(path.join(v8Dir, '.nojekyll'), '')
+
     // Copy repo icon
     const repoIcon = path.join(__dirname, 'src', 'SnapManga', 'icon.png')
     if (fs.existsSync(repoIcon)) {
