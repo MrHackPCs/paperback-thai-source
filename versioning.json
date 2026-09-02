@@ -1,12 +1,12 @@
 {
-  "buildTime": "2026-09-02T09:34:05.941Z",
+  "buildTime": "2026-09-02T09:43:26.687Z",
   "builtWith": {
     "toolchain": "0.8.7",
     "types": "0.8.7"
   },
   "repository": {
-    "name": "Thai Manga Extensions",
-    "description": "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!"
+    "name": "PaperBack Thai Source",
+    "description": "PaperBack Thai Source — Paperback extensions for Thai manga (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!"
   },
   "sources": [
     {
