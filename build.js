@@ -138,11 +138,45 @@ const SOURCES = [
                 github: 'https://github.com/MrHackPCs'
             }
         ]
+    },
+    {
+        id: 'ChibiManga',
+        name: 'Chibi-Manga',
+        author: 'Paperback Community',
+        desc: 'Extension that pulls manga from chibi-manga.com (Thai translation)',
+        description: 'Extension that pulls manga from chibi-manga.com (Thai translation)',
+        website: 'https://chibi-manga.com',
+        websiteBaseURL: 'https://chibi-manga.com',
+        version: '1.0.0',
+        icon: 'icon.png',
+        language: '🇹🇭',
+        contentRating: 'EVERYONE',
+        tags: [
+            {
+                text: 'Thai',
+                type: 'default'
+            }
+        ],
+        badges: [
+            {
+                label: 'Thai',
+                textColor: '#FFFFFF',
+                backgroundColor: '#4A90E2'
+            }
+        ],
+        capabilities: 117,
+        intents: 21,
+        developers: [
+            {
+                name: 'Paperback Community',
+                github: 'https://github.com/MrHackPCs'
+            }
+        ]
     }
 ]
 
 async function build() {
-    console.log('🚀 Building 4-Source Paperback Repository (Snap-Manga, Flash-Manga, MangaKimi, NekoPost)...')
+    console.log('🚀 Building 5-Source Paperback Repository (Snap-Manga, Flash-Manga, MangaKimi, NekoPost, Chibi-Manga)...')
 
     const distDir = path.join(__dirname, 'public')
     const v9Dir = path.join(distDir, '0.9')
@@ -228,7 +262,7 @@ if (typeof globalThis !== 'undefined') {
         },
         repository: {
             name: "Thai Manga Extensions",
-            description: "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi & NekoPost)!"
+            description: "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!"
         },
         sources: SOURCES
     }
@@ -237,7 +271,7 @@ if (typeof globalThis !== 'undefined') {
     fs.writeFileSync(path.join(distDir, 'versioning.json'), versioningJson)
     fs.writeFileSync(path.join(v9Dir, 'versioning.json'), versioningJson)
     fs.writeFileSync(path.join(v8Dir, 'versioning.json'), versioningJson)
-    console.log('\n✔ Generated Universal versioning.json with all 4 sources')
+    console.log('\n✔ Generated Universal versioning.json with all 5 sources')
 
     // 4. Fetch the official NetSky web page and adapt it
     console.log('Fetching NetSky 0.9 web app template...')
@@ -252,7 +286,7 @@ if (typeof globalThis !== 'undefined') {
     if (templateHtml) {
         templateHtml = templateHtml
             .replace(/Netsky's Extensions \(0\.9\)/g, "Thai Manga Extensions")
-            .replace(/Netsky's extensions for 0\.9!/g, "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi & NekoPost)!")
+            .replace(/Netsky's extensions for 0\.9!/g, "Thai Manga extensions for Paperback (Snap-Manga, Flash-Manga, MangaKimi, NekoPost & Chibi-Manga)!")
             .replace(/https:\/\/thenetsky\.github\.io\/netskys-extensions\/0\.9/g, "https://mrhackpcs.github.io/flash-manga")
 
         fs.writeFileSync(path.join(distDir, 'index.html'), templateHtml)
@@ -261,7 +295,7 @@ if (typeof globalThis !== 'undefined') {
         console.log('✔ Generated exact NetSky web app interface')
     }
 
-    console.log('\n🎉 4-Source build complete!')
+    console.log('\n🎉 5-Source build complete!')
 }
 
 build().catch(err => {

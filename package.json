@@ -4,7 +4,8 @@
   "description": "Paperback iOS extension for Flash-Manga (Thai translation)",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "test": "node test_simulation.js"
   },
   "keywords": [
     "paperback",
